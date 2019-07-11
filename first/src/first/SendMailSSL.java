@@ -35,7 +35,7 @@ class Mailer{
 public class SendMailSSL{    
  public static void main(String[] args) {    
      //from,password,to,subject,message  
-     Mailer.send("rohitduggal99@gmail.com","rD@IPHONE5S","s.dabas3012@gmail.com","hello javatpoint","How r u?");  
+     Mailer.send("rohitduggal99@gmail.com","rD@IPHONE5S","rohitduggal99@gmail.com","hello javatpoint","How r u?");  
      //change from, password and to  
  }    
 }    

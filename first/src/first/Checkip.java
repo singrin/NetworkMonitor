@@ -47,7 +47,7 @@ public class Checkip extends JFrame {
 	 * Create the frame.
 	 */
 	public Checkip() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -61,11 +61,11 @@ public class Checkip extends JFrame {
 		contentPane.add(lblNetworkMonitoring);
 		
 		JLabel lblEnterIp = new JLabel("Enter IP");
-		lblEnterIp.setBounds(108, 115, 62, 33);
+		lblEnterIp.setBounds(93, 70, 62, 33);
 		contentPane.add(lblEnterIp);
 		
 		textFieldIP = new JTextField();
-		textFieldIP.setBounds(180, 114, 100, 34);
+		textFieldIP.setBounds(224, 69, 100, 34);
 		textFieldIP.setMaximumSize(new Dimension(100, 100));
 		textFieldIP.setDisabledTextColor(new Color(109, 109, 109));
 		textFieldIP.setToolTipText("Enter a valid IP Address");
@@ -94,13 +94,15 @@ public class Checkip extends JFrame {
 							JLabel label = new JLabel();
 							String r = results.get(i);
 							label.setText(r);
-							show_results.add(label);
+							show_results.getContentPane().add(label);
 							label.setBounds(13, y, 250, 24);
 							show_results.contentPane.revalidate();
 							show_results.contentPane.repaint();
-							y+= 15;
+							y+= 20;
 						}
-						
+
+						Checkip.this.dispose();
+					    Checkip.this.setVisible(false);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -110,8 +112,29 @@ public class Checkip extends JFrame {
 			}
 		});
 		
-		btnSubmit.setBounds(141, 172, 94, 25);
+		btnSubmit.setBounds(166, 139, 94, 25);
 		contentPane.add(btnSubmit);
+		
+		JButton btnNetworkMap = new JButton("Network Map");
+		btnNetworkMap.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				setBounds(100, 100, 450, 300);
+				contentPane = new JPanel();
+				contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+				setContentPane(contentPane);
+				contentPane.setLayout(null);
+				
+				NetworkMap open =new NetworkMap();
+				open.setVisible(true);
+				Checkip.this.dispose();
+				Checkip.this.setVisible(false);
+				
+				
+			}
+		});
+		btnNetworkMap.setBounds(39, 179, 116, 23);
+		contentPane.add(btnNetworkMap);
 	}
 	
 
