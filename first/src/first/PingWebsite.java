@@ -20,10 +20,11 @@ public class PingWebsite
 		// creating the sub process, execute system command 
 		ProcessBuilder build = new ProcessBuilder(commandList); 
 		Process process = build.start(); 
-		
+	    
 		// to read the output 
 		BufferedReader input = new BufferedReader(new InputStreamReader 
-								(process.getInputStream())); 
+								(process.getInputStream()));
+	
 		BufferedReader Error = new BufferedReader(new InputStreamReader 
 								(process.getErrorStream())); 
 		String s = null; 
@@ -31,10 +32,11 @@ public class PingWebsite
 		System.out.println("Standard output: "); 
 
 		ArrayList<String> results = new ArrayList<String>();
-		while((s = input.readLine()) != null) 
+	while((s = input.readLine()) != null) 
 		{ 
 			System.out.println(s);
 			results.add(s);
+			
 		} 
 		System.out.println("error (if any): "); 
 		while((s = Error.readLine()) != null) 

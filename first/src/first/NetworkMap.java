@@ -74,12 +74,12 @@ public class NetworkMap extends JFrame {
 				txtpnMobileTejaswis.setVisible(true);
 				txtpnMobileTejaswis.setBackground(SystemColor.control);
 				txtpnMobileTejaswis.setText("172.20.10.3\r\nMobile\r\nTejaswi's Mobile");
-				txtpnMobileTejaswis.setBounds(577, 203, 100, 57);
+				txtpnMobileTejaswis.setBounds(543, 203, 100, 57);
 				contentPane.add(txtpnMobileTejaswis);
 				
 			}
 		});
-		btnNewButton.setBounds(567, 155, 105, 49);
+		btnNewButton.setBounds(543, 155, 105, 49);
 		contentPane.add(btnNewButton);
 		
 		JButton btnHome_1 = new JButton("Home Server");
@@ -92,7 +92,7 @@ public class NetworkMap extends JFrame {
 		btnHome_1.setIcon(new ImageIcon(NetworkMap.class.getResource("/javax/swing/plaf/metal/icons/ocean/directory.gif")));
 		btnHome_1.setForeground(Color.BLACK);
 		btnHome_1.setBackground(Color.GREEN);
-		btnHome_1.setBounds(319, 269, 162, 49);
+		btnHome_1.setBounds(311, 269, 162, 49);
 		contentPane.add(btnHome_1);
 		
 		JLabel lblNetworkMap = new JLabel("Network Map");
@@ -105,8 +105,62 @@ public class NetworkMap extends JFrame {
 		txtpnMobileRohits.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		txtpnMobileRohits.setBackground(SystemColor.control);
 		txtpnMobileRohits.setText("172.20.10.1\r\nMobile\r\nRohit's Mobile\r\n");
-		txtpnMobileRohits.setBounds(358, 318, 89, 49);
+		txtpnMobileRohits.setBounds(347, 318, 89, 49);
 		contentPane.add(txtpnMobileRohits);
+		
+		JButton btnLaptop = new JButton("Laptop");
+		btnLaptop.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JTextPane txtpnLaptopTejaswis = new JTextPane();
+				txtpnLaptopTejaswis.setBackground(SystemColor.control);
+				txtpnLaptopTejaswis.setText("172.20.10.13\r\nLaptop\r\nTejaswi's Laptop");
+				txtpnLaptopTejaswis.setBounds(138, 204, 89, 49);
+				contentPane.add(txtpnLaptopTejaswis);
+			}
+		});
+		btnLaptop.setBackground(Color.GREEN);
+		btnLaptop.setIcon(new ImageIcon(NetworkMap.class.getResource("/com/sun/java/swing/plaf/windows/icons/Computer.gif")));
+		btnLaptop.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnLaptop.setBounds(128, 155, 111, 49);
+		contentPane.add(btnLaptop);
+		
+		
+		
+		JButton btnLaptop_1 = new JButton("Laptop");
+		btnLaptop_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JTextPane txtpnLaptopRohits = new JTextPane();
+				txtpnLaptopRohits.setBackground(SystemColor.control);
+				txtpnLaptopRohits.setText("172.20.10.5\r\nLaptop\r\nRohit's Laptop");
+				txtpnLaptopRohits.setBounds(138, 471, 89, 54);
+				contentPane.add(txtpnLaptopRohits);
+			}
+		});
+		btnLaptop_1.setBackground(Color.GREEN);
+		btnLaptop_1.setIcon(new ImageIcon(NetworkMap.class.getResource("/com/sun/java/swing/plaf/windows/icons/Computer.gif")));
+		btnLaptop_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnLaptop_1.setBounds(128, 417, 111, 49);
+		contentPane.add(btnLaptop_1);
+		
+		
+		
+		JButton btnWebsite = new JButton("Website");
+		btnWebsite.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			JTextPane txtpnWwwrajyasabhanicin = new JTextPane();
+			txtpnWwwrajyasabhanicin.setBackground(SystemColor.control);
+			txtpnWwwrajyasabhanicin.setText("192.168.43.1\r\nWebsite\r\nwww.rajyasabha.nic.in\r\n");
+			txtpnWwwrajyasabhanicin.setBounds(543, 471, 117, 65);
+			contentPane.add(txtpnWwwrajyasabhanicin);
+			
+			}
+		});
+		btnWebsite.setBackground(Color.GREEN);
+		btnWebsite.setIcon(new ImageIcon(NetworkMap.class.getResource("/com/sun/javafx/scene/control/skin/modena/HTMLEditor-Outdent-Black-rtl.png")));
+		btnWebsite.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnWebsite.setBounds(543, 417, 105, 49);
+		contentPane.add(btnWebsite);
+		
 		
 		
 		
